@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./素材/js/touch-0.2.14.min.js"></script>
+    <script src="./素材/js/zepto.js"></script>
+<script src="./素材/js/jquery-3.4.0.js"></script>
+<script src="./素材/js/fx.js"></script>
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+        }
+    *{margin: 0;padding: 0;}
+    .box{
+       position: absolute;
+       top:81%;
+       left: 76%;
+       z-index: 5;
+    }
+    .box1{
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        background: url('./素材/image/bg1.png') no-repeat -70px -4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box1 img{
+        margin-left: -175px;
+    }
+    p{
+        width: 23px;
+        overflow: hidden;
+    }
+    .box2 img{
+        margin-left: -242px;
+    }
+    .box3 img{
+        margin-left: -219px;
+    }
+    .box4 img{
+        margin-left: -199px;
+    }
+    .box1{
+        position:absolute;
+    }
+    .nei{
+        position: absolute;
+       top:85%;
+       left: 80%;
+    }
+    .top{
+       animation: top 1s linear 1 alternate-reverse forwards;
+    }
+    @keyframes top{
+        0%{
+            transform:translateY(-200px);
+        }
+        50%{
+            transform:translateY(-100px);
+        }
+        100%{
+            transform:translateY(0px);
+        }
+    }
+
+
+
+    .top_{
+       animation: top_ 1s linear 1 alternate-reverse forwards;
+    }
+    @keyframes top_{
+        0%{
+            transform:translateY(0px);
+        }
+        50%{
+            transform:translateY(-100px);
+        }
+        100%{
+            transform:translateY(-200px);
+        }
+    }
+
+
+    .top1{
+       animation: top1 1s linear 1 alternate-reverse forwards;
+    }
+    @keyframes top1{
+        0%{
+            transform:translate(-78px,-157px);
+        }
+        50%{
+            transform:translate(-39px,-70px);
+        }
+        100%{
+            transform:translate(0px);
+        }
+    }
+
+    .top1_{
+       animation: top1_ 1s linear 1 alternate-reverse forwards;
+    }
+    @keyframes top1_{
+        0%{
+            transform:translate(0px);
+        }
+        50%{
+            transform:translate(-39px,-70px);
+        }
+        100%{
+            transform:translate(-78px,-157px);
+        }
+    }
+
+
+    .left1{
+       animation: left1 1s linear 1 alternate-reverse forwards;
+    }
+    @keyframes left1{
+        0%{
+            transform:translate(-150px,-88px);
+        }
+        50%{
+            transform:translate(-75px,-44px);
+        }
+        100%{
+            transform:translate(0px);
+        }
+    }
+
+    .left1_{
+       animation: left1_ 1s linear 1 alternate-reverse forwards;
+    }
+    @keyframes left1_{
+        0%{
+            transform:translate(0px);
+        }
+        50%{
+            transform:translate(-75px,-44px);
+        }
+        100%{
+            transform:translate(-150px,-88px);
+        }
+    }
+
+
+
+    .left{
+       animation: left 1s linear 1 alternate-reverse forwards;
+    }
+    @keyframes left{
+        0%{
+            transform:translateX(-200px);
+        }
+        50%{
+            transform:translateX(-100px);
+        }
+        100%{
+            transform:translateX(0px);
+        }
+    }
+
+
+    .left_{
+       animation: left_ 1s linear 1 alternate-reverse forwards;
+    }
+    @keyframes left_{
+        0%{
+            transform:translateX(0px);
+        }
+        50%{
+            transform:translateX(-100px);
+        }
+        100%{
+            transform:translateX(-200px);
+        }
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img class="a" src="./素材/image/menu.png" alt="">
+    </div>
+    <div class="nei">
+
+        <div class="box1 box0"> <p><img src="./素材/image/bg1.png" alt=""></p> </div>
+        <div class="box1 box2"> <p><img src="./素材/image/bg1.png" alt=""></p> </div>
+        <div class="box1 box3"> <p><img src="./素材/image/bg1.png" alt=""></p> </div>
+        <div class="box1 box4"> <p><img src="./素材/image/bg1.png" alt=""></p> </div>
+    </div>
+</body>
+<script>
+var btn=document.getElementsByClassName('box')[0];
+var box1=document.getElementsByClassName('box1')[0];
+var box2=document.getElementsByClassName('box2')[0];
+var box3=document.getElementsByClassName('box3')[0];
+var box4=document.getElementsByClassName('box4')[0];
+var shi=document.getElementsByClassName('shi')[0];
+    var a=true;
+touch.on(btn,'click',function(){
+    if(a){
+    $('.box0').addClass('top').removeClass('top_');
+    $('.box2').addClass('top1').removeClass('top1_');
+    $('.box3').addClass('left1').removeClass('left1_');
+    $('.box4').addClass('left').removeClass('left_');
+    a=false;
+    }else if(a===false){
+     a =true;
+    $('.box0').removeClass('top').addClass("top_");
+    $('.box2').removeClass('top1').addClass("top1_");
+    $('.box3').removeClass('left1').addClass("left1_");
+    $('.box4').removeClass('left').addClass("left_"); 
+   
+    }
+})
+</script>
+</html>
